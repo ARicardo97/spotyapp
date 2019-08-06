@@ -1,0 +1,15 @@
+
+<!-- <p>
+  search works!
+</p> -->
+
+<div class="box">
+	<div class="container-1">
+	    <!-- <span class="icon"><i class="fa fa-search"></i></span> -->
+		<input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder="Buscar Artista...">
+	</div>
+</div>
+
+<app-loading *ngIf="loading" class="m-5"></app-loading>
+
+<app-tarjetas *ngIf="!loading" [items]="artistas"></app-tarjetas>
